@@ -14,10 +14,13 @@
     "bower_components",
     "/public/bower_components",
     "test",
-    "tests",
-    "public/bower_components"
+    "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.2"
+    "firebase": "^2.4.2",
+    "jquery": "^2.2.2",
+    "angular": "^1.5.3",
+    "angularfire": "^1.2.0",
+    "angular-ui-router": "^0.2.18"
   }
 }

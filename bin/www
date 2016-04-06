@@ -6,7 +6,7 @@
  * Module dependencies.
  */
 
-var rootDir = 'template';
+var rootDir = 
 
 var app = require('../app');
 var debug = require('debug')(`${rootDir}:server`);

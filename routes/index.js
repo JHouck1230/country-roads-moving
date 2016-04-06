@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/protected', User.authMiddleware, function(req, res) {
   console.log('req.user:', req.user);
-  res.send('wooo! protected!!');
+  res.send();
 });
 
 module.exports = router;

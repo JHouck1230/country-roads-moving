@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var jwt = require('jwt-simple');
 
-const JWT_SECRET = 'this is my secret. TELL NOBODY. this can be as long as you would like';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 var User;
 
@@ -14,16 +14,16 @@ var userSchema = new mongoose.Schema({
 });
 
 userSchema.statics.authMiddleware = function(req, res, next) {
-  var token = req.cookies.cadecookie;
+  var token = req.cookies.appCookie;
   try {
     var payload = jwt.decode(token, JWT_SECRET);
   } catch(err) {
-    return res.clearCookie('cadecookie').status(401).send();
+    return res.clearCookie('appCookie').status(401).send();
   }
 
   User.findById(payload.userId).select({password: 0}).exec(function(err, user) {
     if(err || !user) {
-      return res.clearCookie('cadecookie').status(401).send(err);
+      return res.clearCookie('appCookie').status(401).send(err);
     }
     req.user = user;
     next();
