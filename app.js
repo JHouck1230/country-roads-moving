@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 
 var database = 'countryroads';
 
-const mongoUrl = process.env.MONGODBx_URI || `mongodb://localhost/${database}`;
+const mongoUrl = process.env.MONGODB_URI || `mongodb://localhost/${database}`;
 
 mongoose.connect(mongoUrl, function(err) {
   if(err) {
