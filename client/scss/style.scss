@@ -9,3 +9,11 @@ p.lead {
 .media {
   width: 150vh;
 }
+
+.contactCard {
+  position: fixed;
+}
+
+.well.col-md-2.contactCard.hidden-xs.hidden-sm.hidden-md {
+  word-wrap: break-word;
+}

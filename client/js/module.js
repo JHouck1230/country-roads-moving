@@ -14,26 +14,26 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: '/html/about.html',
     // controller: 'aboutCtrl'
   })
-  .state('rates', {
-    url: '/rates',
-    templateUrl: '/html/rates.html',
-    // controller: 'ratesCtrl'
-  })
-  .state('calendar', {
-    url: '/calendar',
-    templateUrl: '/html/calendar.html',
-    // controller: 'calendarCtrl'
-  })
-  .state('contact', {
-    url: '/contact',
-    templateUrl: '/html/contact.html',
-    // controller: 'contactCtrl'
-  })
-  .state('login', {
-    url: '/login',
-    templateUrl: '/html/login.html',
-    controller: 'loginCtrl'
-  })
+  // .state('rates', {
+  //   url: '/rates',
+  //   templateUrl: '/html/components/rates.html',
+  //   // controller: 'ratesCtrl'
+  // })
+  // .state('calendar', {
+  //   url: '/calendar',
+  //   templateUrl: '/html/components/calendar.html',
+  //   // controller: 'calendarCtrl'
+  // })
+  // .state('contact', {
+  //   url: '/contact',
+  //   templateUrl: '/html/components/contact.html',
+  //   // controller: 'contactCtrl'
+  // })
+  // .state('login', {
+  //   url: '/login',
+  //   templateUrl: '/html/login.html',
+  //   controller: 'loginCtrl'
+  // })
   $urlRouterProvider.otherwise('/about');
 })
 
