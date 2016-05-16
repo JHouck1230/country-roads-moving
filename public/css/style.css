@@ -8,9 +8,10 @@ p.lead {
   width: 150vh; }
 
 .contactCard {
-  position: fixed; }
+  position: fixed;
+  word-wrap: break-word; }
 
-.well.col-md-2.contactCard.hidden-xs.hidden-sm.hidden-md {
+.contact {
   word-wrap: break-word; }
 
 /*# sourceMappingURL=style.css.map */

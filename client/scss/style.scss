@@ -12,8 +12,9 @@ p.lead {
 
 .contactCard {
   position: fixed;
+  word-wrap: break-word;
 }
-
-.well.col-md-2.contactCard.hidden-xs.hidden-sm.hidden-md {
+ 
+.contact {
   word-wrap: break-word;
 }
