@@ -14,4 +14,16 @@ p.lead {
 .contact {
   word-wrap: break-word; }
 
+#progressbar {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  display: none; }
+
+.truckImg {
+  height: 5vh;
+  left: 0;
+  bottom: 0;
+  position: fixed; }
+
 /*# sourceMappingURL=style.css.map */

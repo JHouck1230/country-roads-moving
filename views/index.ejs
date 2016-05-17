@@ -27,5 +27,8 @@
     <navbar></navbar>
     <contact></contact>
     <ui-view></ui-view>
+    <img ng-show='forward' class='truckImg' src="../img/truck.png">
+    <img ng-hide='forward' class='truckImg' src="../img/truck1.png">
+    <progress id='progressbar' value="{{position}}" max="{{max}}"></progress>
   </body>
 </html>
