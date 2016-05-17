@@ -15,7 +15,7 @@ var nodemon = require('gulp-nodemon');
 // General Tasks
 
 gulp.task('default', ['build', 'serve', 'watch']);
-gulp.task('build', ['js', 'css', 'html']);
+gulp.task('build', ['js', 'css', 'html', 'img']);
 gulp.task('watch', ['watch:js', 'watch:css', 'watch:html']);
 
 gulp.task('serve', function() {
@@ -71,6 +71,14 @@ gulp.task('clean:css', function(){
 	return gulp.src('public/css', { read: false })
 		.pipe(rimraf());
 });
+
+///////////////////////////////////////////
+// IMG Tasks
+
+gulp.task('img', function() {
+	return gulp.src(['client/img/*.png', 'client/img/*.jpg'])
+		.pipe(gulp.dest('public/img'));
+})
 
 ///////////////////////////////////////////
 // HTML Tasks
