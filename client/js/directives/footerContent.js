@@ -2,10 +2,10 @@
 
 var app = angular.module('cormo');
 
-app.directive('navbar', function() {
+app.directive('footerContent', function() {
   return {
     restrict: 'E',
-    templateUrl: '../../html/components/navbar.html',
+    templateUrl: '../../html/components/footerContent.html',
     // controller: 'navCtrl'
   }
 })
