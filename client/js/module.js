@@ -27,7 +27,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('contact', {
     url: '/contact',
     templateUrl: '/html/contact.html',
-    // controller: 'contactCtrl'
+    controller: 'contactCtrl'
   })
   .state('login', {
     url: '/login',
