@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('cormo', ['ui.router', 'ui.bootstrap', 'firebase', 'ngTouch', 'ngAnimate']);
+var app = angular.module('cormo', ['ui.router', 'ui.bootstrap', 'firebase', 'ngTouch', 'ngAnimate', 'oitozero.ngSweetAlert']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

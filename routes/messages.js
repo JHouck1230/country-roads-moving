@@ -3,7 +3,6 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-// var xoauth2 = require('xoauth2');
 
 var smtpConfig = {
     host: 'smtp.gmail.com',
@@ -18,7 +17,6 @@ var smtpConfig = {
 var transporter = nodemailer.createTransport(smtpConfig);
 
 router.post('/', function(req, res) {
-  console.log('req.body: ', req.body);
   var mailOptions = {
       to: 'josh123090@gmail.com',
       subject: 'CRMO Message',
@@ -36,11 +34,10 @@ Country Roads Moving Company`,
   };
 
   transporter.sendMail(mailOptions, function(error, info){
-    if(error){
-        res.send(error);
+    if(error || info === undefined){
+        res.status(400).send(error || "No Response.");
     }
-    console.log('Message sent: ' + info.response);
-    res.send(info.response)
+    res.send(info);
   });
 });
 

@@ -2,10 +2,15 @@
 
 var app = angular.module('cormo');
 
-app.controller('contactCtrl', function($scope, MailService) {
+app.controller('contactCtrl', function($scope, MailService, SweetAlert) {
   $scope.sendMail = function() {
     MailService.sendMail($scope.customer)
-    .then(res => console.log("message sent! res: ", res.data),
-          err => console.error("Error: ", err))
+    .then(res => {
+      $scope.customer = {};
+      SweetAlert.swal("Message Sent!", "", "success");
+    }, err => {
+      console.error('Error: ', err);
+      SweetAlert.swal("Message Not Sent!", "", "warning");
+    });
   }
 })
