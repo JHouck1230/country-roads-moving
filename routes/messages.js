@@ -9,7 +9,7 @@ var smtpConfig = {
     port: 465,
     secure: true,
     auth: {
-        user: 'josh123090@gmail.com',
+        user: process.env.GMAIL_ADDRESS,
         pass: process.env.GMAIL_PASS
     }
 };
@@ -18,7 +18,7 @@ var transporter = nodemailer.createTransport(smtpConfig);
 
 router.post('/', function(req, res) {
   var mailOptions = {
-      to: 'josh123090@gmail.com',
+      to: process.env.GMAIL_ADDRESS,
       subject: 'CRMO Message',
       text: `Jake,
 

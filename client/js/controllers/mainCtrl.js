@@ -3,6 +3,7 @@
 var app = angular.module('cormo');
 
 app.controller('mainCtrl', function($scope) {
+
   $scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
