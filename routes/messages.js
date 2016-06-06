@@ -24,10 +24,10 @@ router.post('/', function(req, res) {
 
 Someone left a message for you on your website:
 
-    Customer Name:  ${req.body.name}
-    Phone Number:   ${req.body.phone}
-    Email Address:  ${req.body.email}
-    Message:        ${req.body.message}
+    Customer Name:    ${req.body.name}
+    Phone Number:      ${req.body.phone}
+    Email Address:       ${req.body.email}
+    Message:               ${req.body.message}
 
 Cheers,
 Country Roads Moving Company`,
