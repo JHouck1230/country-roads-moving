@@ -10,15 +10,15 @@ var mongoose = require('mongoose');
 
 var database = 'countryroads';
 
-const mongoUrl = process.env.MONGODB_URI || `mongodb://localhost/${database}`;
+// const mongoUrl = process.env.MONGODB_URI || `mongodb://localhost/${database}`;
 
-mongoose.connect(mongoUrl, function(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log(`MongoDB connected to ${mongoUrl}`);
-  }
-});
+// mongoose.connect(mongoUrl, function(err) {
+//   if(err) {
+//     console.log(err);
+//   } else {
+//     console.log(`MongoDB connected to ${mongoUrl}`);
+//   }
+// });
 
 var app = express();
 
@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
+// app.use('/users', require('./routes/users'));
 app.use('/messages', require('./routes/messages'));
 
 app.use(function(req, res, next) {
